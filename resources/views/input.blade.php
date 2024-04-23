@@ -72,6 +72,9 @@
         <form action="/revers-words" method="post" class="form">
             @csrf
             <h2 class="form-signin-heading">Введите предложение</h2>
+            @if(isset($reverseWords))
+            <h2 class="form-signin-heading">{{$reverseWords}}</h2>
+            @endif
             <input type="text" class="form-control" name="words" placeholder="Предложение" required="" autofocus="" />
             <button class="btn btn-lg btn-primary btn-block" type="submit">Отправить</button>
         </form>

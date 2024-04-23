@@ -20,6 +20,6 @@ class MainController extends Controller
         $words = $request['words'];
         $reverseWords = $this->service->reverse($words);
         //dd($this->service->reverse($words));
-        return view('result', compact('reverseWords'));
+        return view('input', compact('reverseWords'));
     }
 }
